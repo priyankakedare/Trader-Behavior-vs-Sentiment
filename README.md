@@ -1,43 +1,70 @@
-Trader Performance vs Market Sentiment Analysis
-Objective
+📊 Trader Performance vs Market Sentiment Analysis
+🎯 Objective
 
-This project analyzes how Bitcoin market sentiment (Fear/Greed Index) impacts trader behavior and performance on Hyperliquid. The goal is to uncover behavioral patterns and derive actionable trading strategies.
+This project analyzes how Bitcoin market sentiment (Fear/Greed Index) impacts trader behavior and performance on Hyperliquid.
 
-Methodology
+The objective is to identify behavioral patterns across sentiment regimes and derive actionable, sentiment-aware trading strategies.
 
-Data Preparation
+⚙️ Methodology
+1️⃣ Data Preparation
 
-Cleaned trader and sentiment datasets
+Cleaned and validated trader and sentiment datasets
 
-Aligned both datasets at daily level
+Checked for missing values and duplicates
 
-Created key metrics: daily PnL, win rate, trade frequency, position size
+Converted timestamps and aligned both datasets at a daily level
 
-Sentiment-Based Analysis
+Engineered key metrics:
+
+Daily Closed PnL
+
+Win Rate
+
+Trade Frequency
+
+Average Position Size
+
+2️⃣ Sentiment-Based Analysis
 
 Compared profitability across sentiment regimes
 
-Analyzed volatility and trade behavior
+Analyzed PnL volatility using distribution analysis
 
-Examined long/short bias shifts
+Evaluated behavioral changes in:
 
-Trader Segmentation
+Trade frequency
 
-Large vs Small position traders
+Risk exposure (position size)
 
-Frequent vs Infrequent traders
+Long/Short directional bias
 
-Consistent vs Inconsistent traders
+3️⃣ Trader Segmentation
 
-Predictive Modeling
+Traders were segmented to examine differential behavior across sentiment regimes:
 
-Built Logistic Regression model
+Large vs Small Position Traders
 
-Used sentiment + behavioral features
+Frequent vs Infrequent Traders
 
-Achieved 79% accuracy in predicting profitable days
+Consistent vs Inconsistent Traders
 
-Key Insights
+Performance and risk sensitivity were analyzed across these segments.
+
+4️⃣ Predictive Modeling (Bonus)
+
+A Logistic Regression model was developed to predict daily profitability using:
+
+Sentiment regime
+
+Trade frequency
+
+Average position size
+
+📈 Model Accuracy: 79%
+
+This demonstrates that sentiment combined with behavioral metrics has measurable predictive power.
+
+🔎 Key Insights
 
 Profitability is highest during Extreme Fear periods.
 
@@ -45,10 +72,13 @@ Greed phases show lower average returns despite slightly higher win rates.
 
 Traders increase activity and exposure during Fear regimes.
 
-Sentiment regime has measurable predictive power.
+Market sentiment has statistically meaningful predictive influence on daily profitability.
 
-Strategy Recommendations
+🚀 Strategy Recommendations
+Strategy 1 — Controlled Aggression During Extreme Fear
 
-Increase selective aggression during Extreme Fear periods.
+Increase position size selectively during Extreme Fear periods while maintaining disciplined risk management.
 
-Reduce exposure and avoid overtrading during Greed phases.
+Strategy 2 — Risk Reduction During Greed Phases
+
+Reduce exposure and avoid excessive trading during Greed and Extreme Greed regimes to prevent overextension.
